@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Números</title>
+    
     <style>
         body{
             font: 20pt arial;
@@ -15,7 +16,10 @@
             width: 100px;
         }
         div#res{
-            margin-top: 30px;
+            margin-top: 20px;
+        }
+        div#resultado{
+            margin-top: 20px;
         }
     </style>
 
@@ -28,6 +32,13 @@
     <input type="button" value="somar" onclick= "somar()">
     <div id = "res">Resultado</div>
     
+    <h1>Subtraindo Valores</h1> 
+    <input type="number" name = "txt1" id = "txt1"> -
+    <input type="numer" name = "txt2" id = "txt2">
+    <input type="button" value="subtrair" onclick="subtrair()">
+    <div id = "resultado">Resultado</div>
+    
+
     <script>
         function somar(){
             var tn1 = window.document.getElementById('txtn1')
@@ -38,6 +49,18 @@
             var s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é: <strong>${s}</strong>`
         }
+
+        function subtrair(){
+            var tx1 = window.document.getElementById('txt1')
+            var tx2 = window.document.getElementById('txt2')
+            var resultado = window.document.getElementById('resultado')
+            var num1 = Number(tx1.value)
+            var num2 = Number(tx2.value)
+            var sub = num1 - num2
+            resultado.innerHTML = `A subtração entre ${num1} e ${num2} é <strong>${sub}<strong>`
+            
+        }
+
     </script>
 
 </body>
